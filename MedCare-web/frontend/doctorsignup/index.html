@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcare | Hospital Website</title>
+    <!-- Page Icon -->
+    <link rel="shortcut icon" href="image/heartbeat-solid.svg" type="image/x-icon">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Custom Css File Link -->
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        /* Paste the provided CSS theme here */
+
+        body {
+            background: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            margin-left: 40%;
+            display: block;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .css-input {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: none;
+            transition: all .2s ease-out;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            color: var(--black);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background: var(--green);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .js-err {
+            background-color: #777777;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: -600px;
+            margin-left: -10px;
+            font-size: x-large;
+
+        }
+
+        .form-group button:hover {
+            background-color: #13805f;
+        }
+
+        .name123 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section Starts -->
+    <div class="header">
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i> medcare.</a>
+        <h2 class="name123"> Doctor</h2>
+        <nav class="navbar">
+            <a href="/home">home</a>
+            <a href="/doctorsignin">signin</a>
+            <a href="/doctorsignup">signup</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+    <!-- Header Section End -->
+    <section class="home" id="home">
+        <div class="container">
+            <h1 style="text-align: center;">Doctor Signup</h1>
+
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input class="css-input" type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="date_of_birth">Date of Birth:</label>
+                    <input class="css-input" type="date" id="date_of_birth" name="date_of_birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select class="css-input-gender" id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="css-input" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone_number">Phone Number:</label>
+                    <input class="css-input" type="tel" id="phone_number" name="phone_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input class="css-input" type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input class="css-input" type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input class="css-input" type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <br><br>
+                <h2>Educational Background</h2>
+                <br>
+                <div class="form-group">
+                    <label for="medical_school">Medical School:</label>
+                    <input class="css-input" type="text" id="medical_school" name="medical_school" required>
+                </div>
+                <div class="form-group">
+                    <label for="graduation_date">Graduation Date:</label>
+                    <input class="css-input" type="date" id="graduation_date" name="graduation_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="degree_document">Degree Document:</label>
+                    <input class="css-input" type="file" id="degree_document" name="degree_document" accept=".pdf"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="license_number">License Number:</label>
+                    <input class="css-input" type="text" id="license_number" name="license_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="license_document">License Document:</label>
+                    <input class="css-input" type="file" id="license_document" name="license_document" accept=".pdf"
+                        required>
+                </div>
+                <h2>References</h2> <br>
+                <div class="form-group">
+                    <label for="work_experience">Work Experience:</label>
+                    <input class="css-input" type="number" id="work_experience" name="work_experience" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="specialization">Specialization:</label>
+                    <select class="css-input-specialization" id="specialization" name="specialization" required>
+                        <option value="">Select Specialization</option>
+                        <option value="Addiction Medicine">Addiction Medicine</option>
+                        <option value="Aerospace Medicine">Aerospace Medicine</option>
+                        <option value="Allergy and Immunology">Allergy and Immunology</option>
+                        <option value="Andrology">Andrology</option>
+                        <option value="Anesthesiology">Anesthesiology</option>
+                        <option value="Bariatric Medicine">Bariatric Medicine</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+                        <option value="Child and Adolescent Psychiatry">Child and Adolescent Psychiatry</option>
+                        <option value="Clinical Cardiac Electrophysiology">Clinical Cardiac Electrophysiology</option>
+                        <option value="Clinical Genetics">Clinical Genetics</option>
+                        <option value="Clinical Informatics">Clinical Informatics</option>
+                        <option value="Colorectal Surgery">Colorectal Surgery</option>
+                        <option value="Correctional Medicine">Correctional Medicine</option>
+                        <option value="Craniofacial Surgery">Craniofacial Surgery</option>
+                        <option value="Critical Care Medicine">Critical Care Medicine</option>
+                        <option value="Cytopathology">Cytopathology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Dermatopathology">Dermatopathology</option>
+                        <option value="Developmental-Behavioral Pediatrics">Developmental-Behavioral Pediatrics</option>
+                        <option value="Diagnostic Radiology">Diagnostic Radiology</option>
+                        <option value="Disaster Medicine">Disaster Medicine</option>
+                        <option value="Emergency Medical Services">Emergency Medical Services</option>
+                        <option value="Emergency Medicine">Emergency Medicine</option>
+                        <option value="Endocrine Surgery">Endocrine Surgery</option>
+                        <option value="Endocrinology">Endocrinology</option>
+                        <option value="Endovascular Surgical Neuroradiology">Endovascular Surgical Neuroradiology
+                        </option>
+                        <option value="Epilepsy">Epilepsy</option>
+                        <option value="Facial Plastic Surgery">Facial Plastic Surgery</option>
+                        <option value="Family Medicine">Family Medicine</option>
+                        <option value="Forensic Pathology">Forensic Pathology</option>
+                        <option value="Forensic Psychiatry">Forensic Psychiatry</option>
+                        <option value="Gastroenterology">Gastroenterology</option>
+                        <option value="Gastrointestinal Surgery">Gastrointestinal Surgery</option>
+                        <option value="General Surgery">General Surgery</option>
+                        <option value="Geriatric Psychiatry">Geriatric Psychiatry</option>
+                        <option value="Geriatrics">Geriatrics</option>
+                        <option value="Gynecologic Oncology">Gynecologic Oncology</option>
+                        <option value="Hand Surgery">Hand Surgery</option>
+                        <option value="Hepatology">Hepatology</option>
+                        <option value="Hospice and Palliative Medicine">Hospice and Palliative Medicine</option>
+                        <option value="Hyperbaric Medicine">Hyperbaric Medicine</option>
+                        <option value="Infectious Disease Medicine">Infectious Disease Medicine</option>
+                        <option value="Infectious Diseases">Infectious Diseases</option>
+                        <option value="Infectious Disease">Infectious Disease</option>
+                        <option value="Integrative Medicine">Integrative Medicine</option>
+                        <option value="Interventional Cardiology">Interventional Cardiology</option>
+                        <option value="Interventional Radiology">Interventional Radiology</option>
+                        <option value="Maternal-Fetal Medicine">Maternal-Fetal Medicine</option>
+                        <option value="Medical Biochemical Genetics">Medical Biochemical Genetics</option>
+                        <option value="Medical Genetics">Medical Genetics</option>
+                        <option value="Medical Microbiology">Medical Microbiology</option>
+                        <option value="Medical Oncology">Medical Oncology</option>
+                        <option value="Medical Physics">Medical Physics</option>
+                        <option value="Medical Toxicology">Medical Toxicology</option>
+                        <option value="Medicine">Medicine</option>
+                        <option value="Molecular Genetic Pathology">Molecular Genetic Pathology</option>
+                        <option value="Neonatal-Perinatal Medicine">Neonatal-Perinatal Medicine</option>
+                        <option value="Neurological Surgery">Neurological Surgery</option>
+                        <option value="Neuromuscular Medicine">Neuromuscular Medicine</option>
+                        <option value="Neuropathology">Neuropathology</option>
+                        <option value="Neuroradiology">Neuroradiology</option>
+                        <option value="Nephrology">Nephrology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Nuclear Medicine">Nuclear Medicine</option>
+                        <option value="Nuclear Radiology">Nuclear Radiology</option>
+                        <option value="Obstetric Anesthesiology">Obstetric Anesthesiology</option>
+                        <option value="Obstetrics and Gynecology (OB/GYN)">Obstetrics and Gynecology (OB/GYN)</option>
+                        <option value="Occupational Medicine">Occupational Medicine</option>
+                        <option value="Oncology">Oncology</option>
+                        <option value="Ophthalmic Plastic and Reconstructive Surgery">Ophthalmic Plastic and
+                            Reconstructive Surgery</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                        <option value="Orthopedic Sports Medicine">Orthopedic Sports Medicine</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+                        <option value="Orthopedic Trauma">Orthopedic Trauma</option>
+                        <option value="Otolaryngology (ENT)">Otolaryngology (ENT)</option>
+                        <option value="Otolaryngology-Head and Neck Surgery">Otolaryngology-Head and Neck Surgery
+                        </option>
+                        <option value="Pain Medicine">Pain Medicine</option>
+                        <option value="Pathology">Pathology</option>
+                        <option value="Pediatric Anesthesiology">Pediatric Anesthesiology</option>
+                        <option value="Pediatric Cardiology">Pediatric Cardiology</option>
+                        <option value="Pediatric Critical Care Medicine">Pediatric Critical Care Medicine</option>
+                        <option value="Pediatric Emergency Medicine">Pediatric Emergency Medicine</option>
+                        <option value="Pediatric Endocrinology">Pediatric Endocrinology</option>
+                        <option value="Pediatric Gastroenterology">Pediatric Gastroenterology</option>
+                        <option value="Pediatric Hematology-Oncology">Pediatric Hematology-Oncology</option>
+                        <option value="Pediatric Infectious Diseases">Pediatric Infectious Diseases</option>
+                        <option value="Pediatric Nephrology">Pediatric Nephrology</option>
+                        <option value="Pediatric Pathology">Pediatric Pathology</option>
+                        <option value="Pediatric Pulmonology">Pediatric Pulmonology</option>
+                        <option value="Pediatric Radiology">Pediatric Radiology</option>
+                        <option value="Pediatric Rehabilitation Medicine">Pediatric Rehabilitation Medicine</option>
+                        <option value="Pediatric Rheumatology">Pediatric Rheumatology</option>
+                        <option value="Pediatric Surgery">Pediatric Surgery</option>
+                        <option value="Pediatric Transplant Hepatology">Pediatric Transplant Hepatology</option>
+                        <option value="Pediatric Urology">Pediatric Urology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Physical Medicine and Rehabilitation">Physical Medicine and Rehabilitation
+                        </option>
+                        <option value="Plastic Surgery">Plastic Surgery</option>
+                        <option value="Preventive Medicine">Preventive Medicine</option>
+                        <option value="Psychiatry (General)">Psychiatry (General)</option>
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Psychosomatic Medicine">Psychosomatic Medicine</option>
+                        <option value="Public Health and General Preventive Medicine">Public Health and General
+                            Preventive Medicine</option>
+                        <option value="Pulmonary Critical Care Medicine">Pulmonary Critical Care Medicine</option>
+                        <option value="Pulmonology">Pulmonology</option>
+                        <option value="Radiation Oncology">Radiation Oncology</option>
+                        <option value="Radiology">Radiology</option>
+                        <option value="Reproductive Endocrinology and Infertility">Reproductive Endocrinology and
+                            Infertility</option>
+                        <option value="Rheumatology">Rheumatology</option>
+                        <option value="Selective Pathology">Selective Pathology</option>
+                        <option value="Sleep Medicine">Sleep Medicine</option>
+                        <option value="Spinal Cord Injury Medicine">Spinal Cord Injury Medicine</option>
+                        <option value="Sports Medicine">Sports Medicine</option>
+                        <option value="Surgical Critical Care">Surgical Critical Care</option>
+                        <option value="Surgical Oncology">Surgical Oncology</option>
+                        <option value="Thoracic Surgery">Thoracic Surgery</option>
+                        <option value="Transfusion Medicine">Transfusion Medicine</option>
+                        <option value="Transplant Hepatology">Transplant Hepatology</option>
+                        <option value="Trauma Surgery">Trauma Surgery</option>
+                        <option value="Traumatology">Traumatology</option>
+                        <option value="Tropical Medicine">Tropical Medicine</option>
+                        <option value="Undersea and Hyperbaric Medicine">Undersea and Hyperbaric Medicine</option>
+                        <option value="Urgent Care Medicine">Urgent Care Medicine</option>
+                        <option value="Urology">Urology</option>
+                        <option value="Vascular Medicine">Vascular Medicine</option>
+                        <option value="Vascular Neurology">Vascular Neurology</option>
+                        <option value="Vascular Surgery">Vascular Surgery</option>
+                        <option value="Venous and Lymphatic Medicine">Venous and Lymphatic Medicine</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Photo:</label>
+                    <input class="css-input" type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <button id="js-signin-button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="toast-overlay" style="margin-top: 220px;" id="toast-overlay"></div>
+    </section>
+    <script src='signup.js'></script>
+</body>

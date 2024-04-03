@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcare | Hospital Website</title>
+    <!-- Page Icon -->
+    <link rel="shortcut icon" href="image/heartbeat-solid.svg" type="image/x-icon">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Custom Css File Link -->
+    <link rel="stylesheet" href="signin.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        /* Paste the provided CSS theme here */
+
+        body {
+            background: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .name123 {
+            font-size: xx-large;
+            margin-left: -100px;
+        }
+
+        .name1234 {
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section Starts -->
+    <div class="header">
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i> medcare.</a>
+        <h2 class="name123"> Patient</h2>
+        <nav class="navbar">
+            <a href="/patienthome">home</a>
+            <a href="#doctors">doctors</a>
+            <a href="/patientcreateappointment">Book Appointment</a>
+            <a href="/patientprescriptionlist">Prescription</a>
+            <button class="signout-button" id="signout-button">Sign Out</button>
+
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+    <!-- Header Section End -->
+
+    <section class="home" id="home">
+    
+     
+        <div class="toast-overlay" style="margin-top: 220px;" id="toast-overlay"></div>
+    </section>
+    <script src='signin.js'></script>
+</body>
